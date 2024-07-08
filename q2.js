@@ -40,7 +40,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = require("axios");
 /* assign interface/type to the function definition properly */
 var getTodo = function (todoId) { return __awaiter(void 0, void 0, void 0, function () {
-    var res, outres, user, outuser, _a;
+    var res, outres, user, outuser, complete, _a;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -53,10 +53,11 @@ var getTodo = function (todoId) { return __awaiter(void 0, void 0, void 0, funct
             case 2:
                 user = _b.sent();
                 outuser = user.data.name;
+                complete = outres.completed;
                 return [2 /*return*/, {
                         owner: "".concat(outuser),
                         title: "".concat(outres.title),
-                        completed: "".concat(outres.completed)
+                        completed: complete
                     }];
             case 3:
                 _a = _b.sent();

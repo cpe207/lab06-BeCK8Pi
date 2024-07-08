@@ -9,11 +9,11 @@ const getTodo = async (todoId: number) => {
     const outres = res.data;
     const user = await axios.get(`https://jsonplaceholder.typicode.com/users/${outres.userId}`);
     const outuser = user.data.name;
-
+    const complete:boolean = outres.completed;
     return{
       owner:`${outuser}`,
       title:`${outres.title}`,
-      completed: `${outres.completed}`
+      completed: complete
     };
   }
   catch{
