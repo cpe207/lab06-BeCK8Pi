@@ -1,5 +1,5 @@
-// const axios = require("axios");
-import axios from "axios";
+const axios = require("axios");
+//import axios from "axios";
 import { URLSearchParams } from "url";
 
 /* assign interface/type to the function definition properly */

@@ -36,21 +36,24 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// const axios = require("axios");
-var axios_1 = require("axios");
+var axios = require("axios");
 /* assign interface/type to the function definition properly */
 var getUser = function (userId) { return __awaiter(void 0, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        /* Your code here */
-        axios_1.default.get("https://jsonplaceholder.typicode.com/users/".concat(userId))
-            .then(function (res) {
-            var out = res.data.name;
-            return console.log(res.data.name);
-        })
-            .catch(function (err) {
-            return "INVALID USER ID";
-        });
-        return [2 /*return*/];
+    var res, out, _a;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                _b.trys.push([0, 2, , 3]);
+                return [4 /*yield*/, axios.get("https://jsonplaceholder.typicode.com/users/".concat(userId))];
+            case 1:
+                res = _b.sent();
+                out = res.data.name;
+                return [2 /*return*/, out];
+            case 2:
+                _a = _b.sent();
+                return [2 /*return*/, "INVALID USER ID"];
+            case 3: return [2 /*return*/];
+        }
     });
 }); };
 //test case
