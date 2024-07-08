@@ -60,10 +60,7 @@ var getUser = function (userId) { return __awaiter(void 0, void 0, void 0, funct
 var input1 = 1;
 var input2 = 100;
 //run
-//getUser(input1).then((result) => console.log(result));
-//getUser(input2).then((result) => console.log(result));
-for (var i = 0; i < 12; i++) {
-    getUser(i).then(function (result) { return console.log(result); });
-}
+getUser(input1).then(function (result) { return console.log(result); });
+getUser(input2).then(function (result) { return console.log(result); });
 // module.exports = getUser;
 exports.default = getUser;
